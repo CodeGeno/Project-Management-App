@@ -50,15 +50,14 @@ function Login() {
   }
 
   const checkRights = async () => {
-    var a = 0
-    userList.map((user, index) => {
+    console.log('check')
+    var cptr = 0
+    for (const user of userList) {
       if (user.email === login[0].email) {
-        a += 1
+        cptr += 1
       }
-      if (index === userList.length - 1 && a === 0) {
-        addRights()
-      }
-    })
+    }
+    if (cptr === 0) await addRights()
   }
 
   const accountLogIn = async () => {
@@ -72,7 +71,6 @@ function Login() {
 
   const isAdmin = (userDetail) => {
     userList.map((user) => {
-      console.log(user)
       let temp
       if (
         user.email.toLowerCase() === userDetail.email.toLowerCase() &&
@@ -94,10 +92,12 @@ function Login() {
   const accountCreation = async () => {
     const email = login[0].email
     const password = login[0].pwd
-    await createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-      setUserDetail([{ email: cred.user.email, uid: cred.user.uid }])
-    })
-    checkRights()
+    await createUserWithEmailAndPassword(auth, email, password).then(
+      async (cred) => {
+        setUserDetail([{ email: cred.user.email, uid: cred.user.uid }])
+        await checkRights()
+      }
+    )
   }
 
   const handleLoginInput = (e, ind) => {

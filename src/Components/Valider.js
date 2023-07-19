@@ -36,7 +36,7 @@ function Valider({ proj }) {
             setShowCommentaire(!showCommentaire)
           }}
         >
-          Valider le projet
+          Validate The Project
         </button>
         {showCommentaire && (
           <>
@@ -56,7 +56,7 @@ function Valider({ proj }) {
                   updateProject(id, accepted, true)
                 }}
               >
-                Oui
+                Yes
               </button>
               <button
                 className='btn'
@@ -65,7 +65,7 @@ function Valider({ proj }) {
                   updateProject(id, accepted, false)
                 }}
               >
-                Non
+                No
               </button>
             </div>
           </>

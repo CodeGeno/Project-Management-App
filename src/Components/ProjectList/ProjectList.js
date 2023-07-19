@@ -36,7 +36,7 @@ function ProjectList() {
               const { projet, temps, demandeur, accepted, commentaire } = proj
 
               return (
-                <div className='form'>
+                <div className='form' key={index}>
                   <div className='project-top-section'>
                     <div
                       className={

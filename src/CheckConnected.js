@@ -6,8 +6,8 @@ function CheckConnected({ children }) {
   const navigate = useNavigate()
   const { loggedIn } = useContext(LoginContext)
   const checkConnected = () => {
-    console.log(loggedIn)
     if (loggedIn[0].online == false) {
+      console.log('false')
       navigate('/')
     }
   }
