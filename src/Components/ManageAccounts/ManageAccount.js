@@ -57,6 +57,7 @@ function ManageAccount() {
                 </button>
                 <button
                   className={admin ? 'unselected btn' : 'btn'}
+                  disabled={email.toLowerCase() === 'johndoe@gmail.com'}
                   onClick={() => {
                     updateAdmin(id, admin, false)
                   }}
