@@ -74,7 +74,7 @@ function AddingProject() {
     },
   ])
 
-  const imageUpload = () => {
+  const imageUpload = async () => {
     if (image.length === 0) {
     } else {
       for (let i = 0; i < image.length; i++) {
@@ -82,7 +82,7 @@ function AddingProject() {
           storage,
           `${loggedIn[0].name}-${formulaire[0].projet}${unique}/${image[i].name}`
         )
-        uploadBytes(imageRef, image[i])
+        await uploadBytes(imageRef, image[i])
       }
     }
   }
@@ -179,13 +179,14 @@ function AddingProject() {
               <button
                 className='btn'
                 type='submit'
-                onClick={() => {
-                  addProject()
-                  imageUpload()
+                onClick={async () => {
+                  await addProject()
+                  await imageUpload()
                   setFormulaire(initialValue)
+                  setImage([])
                 }}
               >
-                Envoyer
+                Send
               </button>
             </form>
           </div>
