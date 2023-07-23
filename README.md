@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Project Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Avaible at https://projectmanagementapp.site
 
-## Available Scripts
+The Project Management App is a powerful and efficient platform designed to streamline project management processes. Developed to facilitate collaboration and enhance productivity, this app allows users to upload images and provide detailed project descriptions. Project administrators can then review the projects and make informed decisions by approving or rejecting them, along with providing reasons for their choices.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### Project Creation and Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users can create new projects by providing relevant details such as project name, description, timeline, and associated team members. The ability to upload images allows users to provide visual representations of their projects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Image Uploads to Firebase Firestore
 
-### `npm test`
+- Images are seamlessly uploaded and stored in Firebase Firestore, providing a scalable and secure cloud-based storage solution for project-related visual content.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Approval Process
 
-### `npm run build`
+- Project administrators have the authority to review and evaluate submitted projects. They can approve or reject projects based on their alignment with organizational goals, feasibility, or other criteria.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Reason for Approval/Rejection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- When administrators approve or reject projects, they can provide clear and constructive reasons for their decisions. This feedback helps project owners understand the outcome and make improvements if needed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Collaboration and Communication
 
-### `npm run eject`
+- The app fosters collaboration among team members by allowing them to communicate within the platform. Users can exchange messages, share updates, and seek input from colleagues involved in the project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Project Tracking and Progress Updates
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Users can track the progress of their projects within the app. They can update project statuses, add milestones, and indicate completed tasks to ensure transparency and accountability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### User Roles and Permissions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The Project Management App employs role-based access control, granting appropriate permissions to users based on their roles within the organization. This ensures data security and restricts unauthorized access to sensitive information.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The Project Management App leverages the following modern technologies to deliver a seamless and user-friendly experience:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### React
 
-### Code Splitting
+- The app's front-end is built using React, providing a dynamic and interactive user interface.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Firebase
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Firebase serves as the backend infrastructure, offering real-time database functionality and hosting capabilities.
+- Firebase Firestore is used to store uploaded images securely and efficiently.
